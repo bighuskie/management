@@ -1,0 +1,255 @@
+/*
+商品管理页的样式
+*/
+// 商品管理列表的样式
+.shop-wrapper {
+  max-height: 975px;
+  overflow: hidden;
+  .card-body {
+    position: relative;
+    padding: 10px 0 0 0;
+    text-align: center;
+    color: #000;
+    &:hover {
+      .manger-wrapper {
+        display: block;
+      }
+    }
+    img {
+      max-width: 100%;
+    }
+    .text {
+      width: 100%;
+      height: 40px;
+      overflow: hidden;
+      padding: 5px 15px;
+      text-align: left;
+      line-height: 18px;
+      font-size: 13px;
+    }
+    .manger-wrapper {
+      display: none;
+      a {
+        position: absolute;
+        top: 0;
+        display: inline-block;
+        text-decoration: none;
+        width: 50px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 5px;
+        background-color: rgba(172, 50, 228, 0.9);
+        color: #fff;
+        &.update {
+          left: 0;
+        }
+        &.delete {
+          right: 0;
+          background-color: rgba(228, 50, 124, 0.9);
+        }
+      }
+    }
+  }
+}
+//分页样式
+.paging-wrapper {
+  width: 100%;
+  text-align: center;
+  a {
+    display: inline-block;
+    width: 45px;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 8px;
+    border: 1px solid slateblue;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #fff;
+    color: slateblue;
+    &.paging {
+      width: 60px;
+      height: 30px;
+    }
+    &:hover {
+      background-color: slateblue;
+      color: white;
+    }
+  }
+}
+
+/*
+商品详情页的样式
+*/
+.detail-wrapper {
+  .img-wrapper {
+    text-align: center;
+    line-height: 350px;
+    img {
+      height: 300px;
+      max-width: 100%;
+    }
+  }
+  // 描述样式
+  .desc-wrapper {
+    h5 {
+      width: 100%;
+      display: block;
+      font-weight: bolder;
+      .branch {
+        display: inline-block;
+        width: 45px;
+        height: 20px;
+        text-align: center;
+        border-radius: 2px;
+        background-color: rgb(219, 76, 124);
+        font-weight: normal;
+        color: #fff;
+      }
+    }
+    .price-wrapper {
+      width: 100%;
+      line-height: 30px;
+      span {
+        color: red;
+        font-weight: bolder;
+        font-size: 18px;
+        &.price {
+          letter-spacing: 12px;
+          color: #000;
+          font-size: 15px;
+          font-weight: normal;
+        }
+        &.icon {
+          font-size: 13px;
+        }
+      }
+    }
+    .weight-wrapper {
+      width: 100%;
+      line-height: 30px;
+      .weight {
+        margin-right: 13px;
+      }
+    }
+    h6 {
+      font-weight: bolder;
+      line-height: 25px;
+    }
+    .config-wrapper {
+      width: 100%;
+      padding: 18px 0 0 0;
+      border-top: 1px solid slateblue;
+      font-size: 0;
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        height: 80px;
+        margin-right: 20px;
+        img {
+          width: 30px;
+          height: 30px;
+          vertical-align: top;
+        }
+        span {
+          margin-left: 5px;
+          font-size: 13px;
+        }
+        .msg-wrapper {
+          display: inline-block;
+          margin-left: 10px;
+          p {
+            font-size: 13px;
+            line-height: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+    .info-wrapper {
+      width: 100%;
+      padding: 0 0 20px 0;
+      border-bottom: 1px solid slateblue;
+      li {
+        display: inline-block;
+        text-decoration: none;
+        width: 200px;
+        height: 20px;
+        line-height: 20px;
+        margin-right: 15px;
+        overflow: hidden;
+        font-size: 13px;
+        &.branch {
+          display: block;
+          width: 100%;
+          margin-bottom: 15px;
+          span {
+            color: slateblue;
+          }
+        }
+      }
+    }
+    .btn-wrapper {
+      margin-top: 20px;
+      a {
+        display: inline-block;
+        width: 100px;
+        height: 35px;
+        line-height: 35px;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 3px;
+        background-color: slateblue;
+        color: #fff;
+        &:first-child {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+/*
+增加商品页的样式
+*/
+form {
+  width: 100%;
+  ul {
+    padding: 0;
+    &.left-wrapper {
+      padding-left: 20px;
+    }
+    li {
+      // display: inline-block;
+      list-style: none;
+      margin-right: 30px;
+      margin-bottom: 15px;
+      line-height: 35px;
+      input {
+        border: 1px solid #eee;
+        text-indent: 12px;
+        width: 400px;
+        border-radius: 16px;
+        &:focus {
+          border: 1px solid slateblue;
+        }
+        &.shopIntro {
+          width: 700px;
+        }
+      }
+    }
+  }
+  .btn-wrapper {
+    .submit {
+      width: 100px;
+      height: 40px;
+      line-height: 40px;
+      margin-left: 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: slateblue;
+      color: #ffffff;
+    }
+  }
+}

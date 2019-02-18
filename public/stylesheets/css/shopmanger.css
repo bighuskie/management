@@ -1,0 +1,241 @@
+/*
+商品管理页的样式
+*/
+.shop-wrapper {
+  max-height: 975px;
+  overflow: hidden;
+}
+.shop-wrapper .card-body {
+  position: relative;
+  padding: 10px 0 0 0;
+  text-align: center;
+  color: #000;
+}
+.shop-wrapper .card-body:hover .manger-wrapper {
+  display: block;
+}
+.shop-wrapper .card-body img {
+  max-width: 100%;
+}
+.shop-wrapper .card-body .text {
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  padding: 5px 15px;
+  text-align: left;
+  line-height: 18px;
+  font-size: 13px;
+}
+.shop-wrapper .card-body .manger-wrapper {
+  display: none;
+}
+.shop-wrapper .card-body .manger-wrapper a {
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  text-decoration: none;
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgba(172, 50, 228, 0.9);
+  color: #fff;
+}
+.shop-wrapper .card-body .manger-wrapper a.update {
+  left: 0;
+}
+.shop-wrapper .card-body .manger-wrapper a.delete {
+  right: 0;
+  background-color: rgba(228, 50, 124, 0.9);
+}
+.paging-wrapper {
+  width: 100%;
+  text-align: center;
+}
+.paging-wrapper a {
+  display: inline-block;
+  width: 45px;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 8px;
+  border: 1px solid slateblue;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #fff;
+  color: slateblue;
+}
+.paging-wrapper a.paging {
+  width: 60px;
+  height: 30px;
+}
+.paging-wrapper a:hover {
+  background-color: slateblue;
+  color: white;
+}
+/*
+商品详情页的样式
+*/
+.detail-wrapper .img-wrapper {
+  text-align: center;
+  line-height: 350px;
+}
+.detail-wrapper .img-wrapper img {
+  height: 300px;
+  max-width: 100%;
+}
+.detail-wrapper .desc-wrapper h5 {
+  width: 100%;
+  display: block;
+  font-weight: bolder;
+}
+.detail-wrapper .desc-wrapper h5 .branch {
+  display: inline-block;
+  width: 45px;
+  height: 20px;
+  text-align: center;
+  border-radius: 2px;
+  background-color: #db4c7c;
+  font-weight: normal;
+  color: #fff;
+}
+.detail-wrapper .desc-wrapper .price-wrapper {
+  width: 100%;
+  line-height: 30px;
+}
+.detail-wrapper .desc-wrapper .price-wrapper span {
+  color: red;
+  font-weight: bolder;
+  font-size: 18px;
+}
+.detail-wrapper .desc-wrapper .price-wrapper span.price {
+  letter-spacing: 12px;
+  color: #000;
+  font-size: 15px;
+  font-weight: normal;
+}
+.detail-wrapper .desc-wrapper .price-wrapper span.icon {
+  font-size: 13px;
+}
+.detail-wrapper .desc-wrapper .weight-wrapper {
+  width: 100%;
+  line-height: 30px;
+}
+.detail-wrapper .desc-wrapper .weight-wrapper .weight {
+  margin-right: 13px;
+}
+.detail-wrapper .desc-wrapper h6 {
+  font-weight: bolder;
+  line-height: 25px;
+}
+.detail-wrapper .desc-wrapper .config-wrapper {
+  width: 100%;
+  padding: 18px 0 0 0;
+  border-top: 1px solid slateblue;
+  font-size: 0;
+}
+.detail-wrapper .desc-wrapper .config-wrapper li {
+  display: inline-block;
+  vertical-align: middle;
+  height: 80px;
+  margin-right: 20px;
+}
+.detail-wrapper .desc-wrapper .config-wrapper li img {
+  width: 30px;
+  height: 30px;
+  vertical-align: top;
+}
+.detail-wrapper .desc-wrapper .config-wrapper li span {
+  margin-left: 5px;
+  font-size: 13px;
+}
+.detail-wrapper .desc-wrapper .config-wrapper li .msg-wrapper {
+  display: inline-block;
+  margin-left: 10px;
+}
+.detail-wrapper .desc-wrapper .config-wrapper li .msg-wrapper p {
+  font-size: 13px;
+  line-height: 20px;
+  height: 20px;
+}
+.detail-wrapper .desc-wrapper .info-wrapper {
+  width: 100%;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid slateblue;
+}
+.detail-wrapper .desc-wrapper .info-wrapper li {
+  display: inline-block;
+  text-decoration: none;
+  width: 200px;
+  height: 20px;
+  line-height: 20px;
+  margin-right: 15px;
+  overflow: hidden;
+  font-size: 13px;
+}
+.detail-wrapper .desc-wrapper .info-wrapper li.branch {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.detail-wrapper .desc-wrapper .info-wrapper li.branch span {
+  color: slateblue;
+}
+.detail-wrapper .desc-wrapper .btn-wrapper {
+  margin-top: 20px;
+}
+.detail-wrapper .desc-wrapper .btn-wrapper a {
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  line-height: 35px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 3px;
+  background-color: slateblue;
+  color: #fff;
+}
+.detail-wrapper .desc-wrapper .btn-wrapper a:first-child {
+  margin-right: 20px;
+}
+/*
+增加商品页的样式
+*/
+form {
+  width: 100%;
+}
+form ul {
+  padding: 0;
+}
+form ul.left-wrapper {
+  padding-left: 20px;
+}
+form ul li {
+  list-style: none;
+  margin-right: 30px;
+  margin-bottom: 15px;
+  line-height: 35px;
+}
+form ul li input {
+  border: 1px solid #eee;
+  text-indent: 12px;
+  width: 400px;
+  border-radius: 16px;
+}
+form ul li input:focus {
+  border: 1px solid slateblue;
+}
+form ul li input.shopIntro {
+  width: 700px;
+}
+form .btn-wrapper .submit {
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: slateblue;
+  color: #ffffff;
+}
