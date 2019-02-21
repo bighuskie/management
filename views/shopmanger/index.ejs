@@ -3,25 +3,17 @@
 <div class="main-panel">
   <div class="content-wrapper">
     <div class="row">
-      <div class="col-12">
-        <span class="d-flex align-items-center purchase-popup">
-          <p>
+      <div class="col-12 sort-wrapper">
+       
+          <!-- <p>
             现在你看到的是各种数据和概况，滚动查看信息，点击导航查看更多信息或进行管理
-          </p>
-          <a
-            href="https://github.com/BootstrapDash/PurpleAdmin-Free-Admin-Template"
-            target="_blank"
-            class="btn ml-auto download-button"
-            >管理用户</a
-          >
-          <a
-            href="#product/purple-bootstrap-4-admin-template/"
-            target="_blank"
-            class="btn purchase-button"
-            >更新商品</a
-          >
-          <i class="mdi mdi-close popup-dismiss"></i>
-        </span>
+          </p> -->
+         <ul>
+           <li><a href="/shopmanger?stype=create_time&page=<%=currentPage%>">时间先后</a></li>
+           <li><a href="/shopmanger?stype=shopPrice&page=<%=currentPage%>">价格高低</a></li>
+           <li><a href="/shopmanger?stype=levelDpi&page=<%=currentPage%>">分辨率高低</a></li>
+         </ul>
+      
       </div>
     </div>
     <div class="row shop-wrapper">
@@ -46,8 +38,8 @@
     </div>
     <!-- 分页布局开始 -->
     <div class="paging-wrapper">
-      <a href="/shopmanger?page=<%=currentPage-1%>" class="paging">上一页</a>
-      <a href="/shopmanger?page=<%=currentPage+1%>" class="paging">下一页</a>
+      <a href="/shopmanger?page=<%=currentPage-1%>&stype=<%=sortType%>" class="paging">上一页</a>
+      <a href="/shopmanger?page=<%=currentPage+1%>&stype=<%=sortType%>" class="paging">下一页</a>
     </div>
     <!-- 分页布局结束 -->
   </div>

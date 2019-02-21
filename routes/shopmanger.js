@@ -16,15 +16,18 @@ router.get("/", async (ctx, next) => {
   //当前页不可以小于1
   currentPage = Math.max(currentPage, 1);
   let skip = (currentPage - 1) * limit;
+  let sortType = ctx.request.query.stype || "_id";
   let shops = await shopDB
     .find()
     .limit(limit)
-    .skip(skip);
+    .skip(skip)
+    .sort(sortType);
   await ctx.render("./shopmanger/index", {
     title: "商品管理",
     user: ctx.session.user,
     shops,
-    currentPage
+    currentPage,
+    sortType
   });
 });
 

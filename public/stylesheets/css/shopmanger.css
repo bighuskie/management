@@ -19,23 +19,53 @@
 /*
 2、商品管理页的样式
 */
-.shop-wrapper {
+.main-panel .sort-wrapper {
+  margin-bottom: 20px;
+}
+.main-panel .sort-wrapper ul {
+  width: 100%;
+  background-color: #7c7696;
+  padding: 0;
+  height: 50px;
+}
+.main-panel .sort-wrapper ul li {
+  display: inline-block;
+  height: 100%;
+  list-style: none;
+  box-sizing: border-box;
+  padding: 0 20px;
+  text-align: center;
+}
+.main-panel .sort-wrapper ul li:hover {
+  background-color: slateblue;
+}
+.main-panel .sort-wrapper ul li a {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  line-height: 50px;
+  font-size: 16px;
+  color: #fff;
+}
+.main-panel .shop-wrapper {
   max-height: 975px;
   overflow: hidden;
 }
-.shop-wrapper .card-body {
+.main-panel .shop-wrapper .card-body {
   position: relative;
   padding: 10px 0 0 0;
   text-align: center;
   color: #000;
 }
-.shop-wrapper .card-body:hover .manger-wrapper {
+.main-panel .shop-wrapper .card-body:hover .manger-wrapper {
   display: block;
 }
-.shop-wrapper .card-body img {
+.main-panel .shop-wrapper .card-body img {
   max-width: 100%;
 }
-.shop-wrapper .card-body .text {
+.main-panel .shop-wrapper .card-body .text {
   width: 100%;
   height: 40px;
   overflow: hidden;
@@ -44,10 +74,10 @@
   line-height: 18px;
   font-size: 13px;
 }
-.shop-wrapper .card-body .manger-wrapper {
+.main-panel .shop-wrapper .card-body .manger-wrapper {
   display: none;
 }
-.shop-wrapper .card-body .manger-wrapper a {
+.main-panel .shop-wrapper .card-body .manger-wrapper a {
   position: absolute;
   top: 0;
   display: inline-block;
@@ -60,10 +90,10 @@
   background-color: rgba(172, 50, 228, 0.9);
   color: #fff;
 }
-.shop-wrapper .card-body .manger-wrapper a.update {
+.main-panel .shop-wrapper .card-body .manger-wrapper a.update {
   left: 0;
 }
-.shop-wrapper .card-body .manger-wrapper a.delete {
+.main-panel .shop-wrapper .card-body .manger-wrapper a.delete {
   right: 0;
   background-color: rgba(228, 50, 124, 0.9);
 }
