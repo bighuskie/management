@@ -1,5 +1,23 @@
 /*
-商品管理页的样式
+1、首页以及导航栏的样式
+*/
+.api-wrapper {
+  display: none;
+}
+.api-wrapper ul {
+  padding: 0;
+}
+.api-wrapper ul li {
+  list-style: none;
+  text-indent: 36px;
+}
+.api-wrapper ul li a {
+  text-decoration: none;
+  line-height: 35px;
+  color: rgba(15, 2, 2, 0.637);
+}
+/*
+2、商品管理页的样式
 */
 .shop-wrapper {
   max-height: 975px;
@@ -227,6 +245,10 @@ form ul li input:focus {
 }
 form ul li input.shopIntro {
   width: 700px;
+}
+form ul li.cpuNumber select {
+  width: 80px;
+  border-radius: 10px;
 }
 form .btn-wrapper .submit {
   width: 100px;

@@ -1,5 +1,25 @@
 /*
-商品管理页的样式
+1、首页以及导航栏的样式
+*/
+//导航栏api的样式
+.api-wrapper {
+  display: none;
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+      text-indent: 36px;
+      a {
+        text-decoration: none;
+        line-height: 35px;
+        color: rgba(15, 2, 2, 0.637);
+      }
+    }
+  }
+}
+
+/*
+2、商品管理页的样式
 */
 // 商品管理列表的样式
 .shop-wrapper {
@@ -235,6 +255,12 @@ form {
         }
         &.shopIntro {
           width: 700px;
+        }
+      }
+      &.cpuNumber {
+        select {
+          width: 80px;
+          border-radius: 10px;
         }
       }
     }

@@ -12,6 +12,7 @@ const users = require("./routes/users");
 const login = require("./routes/login");
 const register = require("./routes/register");
 const shopmanger = require("./routes/shopmanger");
+const api = require("./routes/api");
 
 // error handler
 onerror(app);
@@ -56,6 +57,7 @@ app.use(users.routes(), users.allowedMethods());
 app.use(login.routes(), login.allowedMethods());
 app.use(register.routes(), register.allowedMethods());
 app.use(shopmanger.routes(), shopmanger.allowedMethods());
+app.use(api.routes(), api.allowedMethods());
 
 // error-handling
 app.on("error", (err, ctx) => {
