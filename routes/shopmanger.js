@@ -3,14 +3,28 @@ const shopDB = require("../models/shops");
 
 router.prefix("/shopmanger");
 /**
- * 商品管理页页逻辑处理
+ * 商品管理页逻辑处理
  */
 router.get("/", async (ctx, next) => {
-  let shops = await shopDB.find();
+  let currentPage = Number(ctx.request.query.page) || 1;
+  const limit = 12;
+  let dataCount = await shopDB.count();
+  //总页数
+  let pages = Math.ceil(dataCount / limit);
+  //当前页不可以超过总页数
+  currentPage = Math.min(currentPage, pages);
+  //当前页不可以小于1
+  currentPage = Math.max(currentPage, 1);
+  let skip = (currentPage - 1) * limit;
+  let shops = await shopDB
+    .find()
+    .limit(limit)
+    .skip(skip);
   await ctx.render("./shopmanger/index", {
     title: "商品管理",
     user: ctx.session.user,
-    shops
+    shops,
+    currentPage
   });
 });
 
