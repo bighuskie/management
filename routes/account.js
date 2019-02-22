@@ -2,7 +2,9 @@ const router = require("koa-router")();
 const userDB = require("../models/users");
 
 router.prefix("/account");
-
+/**
+ * 请求渲染个人中心页
+ */
 router.get("/", async (ctx, next) => {
   let userId = ctx.session.user._id;
   let userInfo = await userDB.findById(userId);
