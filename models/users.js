@@ -27,8 +27,11 @@ let userSchema = new Schema({
   },
   avater: {
     type: String,
-    default:
-      "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2427075743,3461514293&fm=26&gp=0.jpg"
+    default:"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2427075743,3461514293&fm=26&gp=0.jpg"
+  },
+  intro: {
+    type: String,
+    default: "此人很神秘，什么也没留下"
   }
 });
 
