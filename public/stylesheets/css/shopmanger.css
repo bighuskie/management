@@ -351,12 +351,12 @@ form .btn-wrapper .submit {
 }
 .profile-wrapper .userInfo-wrapper .info-wrapper p.info {
   width: 350px;
-  height: 35px;
   line-height: 35px;
-  text-indent: 10px;
+  box-sizing: border-box;
+  padding-left: 10px;
   border-radius: 5px;
   border: 1px solid #99999b;
-  background-color: rgba(191, 187, 187, 0.46);
+  background-color: white;
 }
 .profile-wrapper .img-wrapper {
   display: inline-block;

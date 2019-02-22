@@ -17,25 +17,25 @@
           <section class="userInfo-wrapper ">
             <div class="info-wrapper">
               <p class="boldFont">用户名</p>
-              <p class="info">daha</p>
+              <p class="info"><%=userInfo.username%></p>
             </div>
             <div class="info-wrapper">
               <p class="boldFont">邮箱</p>
-              <p class="info">heelo</p>
+              <p class="info"><%=userInfo.email%></p>
             </div>
             <div class="info-wrapper">
               <p class="boldFont">注册时间</p>
-              <p class="info">2018</p>
+              <p class="info"><%=userInfo.create_time%></p>
             </div>
             <div class="info-wrapper">
               <p class="boldFont">自我介绍</p>
-              <p class="info">此人很神秘，什么也没留下</p>
+              <p class="info"><%=userInfo.intro%></p>
             </div>
           </section>
           <section class=" img-wrapper ">
             <p class="headline">我的头像</p>
             <div class="img">
-              <img src="/images/faces/face2.jpg" alt="" />
+              <img src="<%=userInfo.avater%>" alt="" />
             </div>
           </section>
         </div>
