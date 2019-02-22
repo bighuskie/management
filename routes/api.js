@@ -1,5 +1,6 @@
 const router = require("koa-router")();
 const shopDB = require("../models/shops");
+const userDB = require("../models/users");
 router.prefix("/api");
 
 router.get("/shoplist", async (ctx, next) => {
@@ -8,7 +9,8 @@ router.get("/shoplist", async (ctx, next) => {
 });
 
 router.get("/userlist", async (ctx, next) => {
-  ctx.body = "this is a users/bar response";
+  let userlist = await userDB.find();
+  ctx.body = userlist;
 });
 
 module.exports = router;
