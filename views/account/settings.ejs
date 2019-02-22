@@ -1,0 +1,80 @@
+<%- include ../layout/head.ejs%>
+
+<!-- 首页样式 -->
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-md-3">
+        <ul class="purchase-popup align-items-center account-wrapper">
+          <li class="title">个人设置</li>
+          <li><a href="/account">账号信息</a></li>
+          <li class="active"><a href="/account/settings">设置</a></li>
+        </ul>
+      </div>
+      <section class="col-md-7 ">
+        <form action="" id="userSettings">
+          <div class="profile-wrapper col-md-12">
+            <p class="title">公开的信息</p>
+            <section class="userInfo-wrapper ">
+              <div class="info-wrapper">
+                <p class="boldFont">用户名</p>
+                <p>
+                  <input
+                    class="info"
+                    value="<%=userInfo.username%>"
+                    name="username"
+                  />
+                </p>
+              </div>
+              <div class="info-wrapper">
+                <p class="boldFont">邮箱</p>
+                <p>
+                  <input
+                    class="info"
+                    value="<%=userInfo.email%>"
+                    name="email"
+                  />
+                </p>
+              </div>
+              <div class="info-wrapper">
+                <p class="boldFont">注册时间</p>
+                <p>
+                  <input
+                    class="info time"
+                    value="<%=userInfo.create_time%>"
+                    readonly
+                  />
+                </p>
+              </div>
+              <div class="info-wrapper">
+                <p class="boldFont">自我介绍</p>
+                <p>
+                  <textarea class="info" name="intro">
+<%=userInfo.intro%></textarea
+                  >
+                </p>
+              </div>
+              <input type="submit" value="确定更改" class="submit"/>
+            </section>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+      <span
+        class="text-muted text-center text-sm-left d-block d-sm-inline-block"
+        >Copyright © 2019 <a href="" target="_blank">BootstrapDash</a>. All
+        rights reserved.
+      </span>
+    </div>
+  </footer>
+  <!-- partial -->
+</div>
+<!-- main-panel ends -->
+
+<!-- 模板容器 -->
+
+<%- include ../layout/footer.ejs%>

@@ -319,6 +319,10 @@ form .btn-wrapper .submit {
 .account-wrapper li:hover {
   background-color: rgba(235, 229, 229, 0.46);
 }
+.account-wrapper li.active {
+  border-left: 2px solid slateblue;
+  font-weight: bolder;
+}
 .account-wrapper li a {
   display: inline-block;
   width: 100%;
@@ -344,12 +348,13 @@ form .btn-wrapper .submit {
 }
 .profile-wrapper .userInfo-wrapper .info-wrapper p {
   margin: 0;
+  padding: 0;
 }
 .profile-wrapper .userInfo-wrapper .info-wrapper p.boldFont {
   line-height: 35px;
   font-weight: bolder;
 }
-.profile-wrapper .userInfo-wrapper .info-wrapper p.info {
+.profile-wrapper .userInfo-wrapper .info-wrapper p .info {
   width: 350px;
   line-height: 35px;
   box-sizing: border-box;
@@ -357,6 +362,21 @@ form .btn-wrapper .submit {
   border-radius: 5px;
   border: 1px solid #99999b;
   background-color: white;
+}
+.profile-wrapper .userInfo-wrapper .info-wrapper p .time {
+  font-size: 13px;
+}
+.profile-wrapper .userInfo-wrapper .submit {
+  width: 90px;
+  border: none;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: slateblue;
+  color: white;
+}
+.profile-wrapper .userInfo-wrapper .submit:hover {
+  background-color: #784e9b;
 }
 .profile-wrapper .img-wrapper {
   display: inline-block;

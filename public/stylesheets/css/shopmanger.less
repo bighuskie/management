@@ -340,6 +340,10 @@ form {
     &:hover {
       background-color: rgba(235, 229, 229, 0.46);
     }
+    &.active {
+      border-left: 2px solid slateblue;
+      font-weight: bolder;
+    }
     a {
       display: inline-block;
       width: 100%;
@@ -365,11 +369,12 @@ form {
       margin-bottom: 10px;
       p {
         margin: 0;
+        padding: 0;
         &.boldFont {
           line-height: 35px;
           font-weight: bolder;
         }
-        &.info {
+        .info {
           width: 350px;
           line-height: 35px;
           box-sizing: border-box;
@@ -378,6 +383,21 @@ form {
           border: 1px solid rgb(153, 153, 155);
           background-color: white;
         }
+        .time {
+          font-size: 13px;
+        }
+      }
+    }
+    .submit {
+      width: 90px;
+      border: none;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 5px;
+      background-color: slateblue;
+      color: white;
+      &:hover{
+        background-color: rgb(120, 78, 155);
       }
     }
   }
@@ -385,13 +405,13 @@ form {
     display: inline-block;
     vertical-align: top;
     // margin-left: 20px;
-    .headline{
+    .headline {
       line-height: 35px;
       margin: 0;
       font-weight: bolder;
     }
-    img{
-      width:200px;
+    img {
+      width: 200px;
       height: 200px;
       border-radius: 5px;
     }
