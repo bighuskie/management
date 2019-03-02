@@ -50,7 +50,7 @@
   color: #fff;
 }
 .main-panel .shop-wrapper {
-  max-height: 975px;
+  max-height: 1100px;
   overflow: hidden;
 }
 .main-panel .shop-wrapper .card-body {
@@ -64,6 +64,10 @@
 }
 .main-panel .shop-wrapper .card-body img {
   max-width: 100%;
+}
+.main-panel .shop-wrapper .card-body .shopPrice {
+  margin: 10px 0 0 15px;
+  color: slateblue;
 }
 .main-panel .shop-wrapper .card-body .text {
   width: 100%;
@@ -106,7 +110,7 @@
   width: 45px;
   height: 30px;
   line-height: 30px;
-  margin-right: 8px;
+  margin: 0 10px;
   border: 1px solid slateblue;
   border-radius: 5px;
   text-decoration: none;

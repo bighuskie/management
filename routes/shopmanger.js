@@ -26,6 +26,7 @@ router.get("/", async (ctx, next) => {
     title: "商品管理",
     user: ctx.session.user,
     shops,
+    pages,
     currentPage,
     sortType
   });
@@ -69,7 +70,6 @@ router.post("/addshop", async (ctx, next) => {
     })
     .catch(err => {
       console.log("保存失败");
-      throw err;
     });
 });
 
@@ -102,7 +102,6 @@ router.post("/editshop", async (ctx, next) => {
     })
     .catch(err => {
       console.log("更新失败");
-      throw err;
     });
 });
 
@@ -114,12 +113,11 @@ router.get("/deleteshop", async (ctx, next) => {
   await shopDB
     .findByIdAndDelete(shopId)
     .then(() => {
-      console.log("删除成功");
+      alert("删除成功");
       ctx.response.redirect("/shopmanger");
     })
     .catch(err => {
       console.log("删除失败");
-      throw err;
     });
 });
 

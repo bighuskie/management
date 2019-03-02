@@ -95,7 +95,12 @@
             <li class="nav-item nav-profile">
               <a href="#" class="nav-link">
                 <div class="nav-profile-image">
-                  <img src="/images/faces/face1.jpg" alt="profile" />
+                    <% if(user){%>
+                      <img src="<%=user.avater%>" alt="头像" />
+                      <%}else{%>
+                        <img src="/images/faces/face1.jpg" alt="profile" />
+                      <%}%>
+                  
                   <span class="login-status online"></span>
                 </div>
                 <div class="nav-profile-text d-flex flex-column">
@@ -104,7 +109,7 @@
                   <%}else{%>
                   <span class="font-weight-bold mb-2">请登录</span>
                   <%}%>
-                  <span class="text-secondary text-small">Project Manager</span>
+                  <span class="text-secondary text-small">管理员</span>
                 </div>
                 <i
                   class="mdi mdi-bookmark-check text-success nav-profile-badge"
