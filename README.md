@@ -12,5 +12,4 @@ Api接口|商品列表api|保留相关接口方便以后可扩展应用
 登录、注册|无|注册、登录认证
 
 ## 页面功能展示
-![商品管理页展示](https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/
-u=702257389,1274025419&fm=27&gp=0.jpg "商品管理页")
+![商品管理页展示](./public/images/faces/face2.jpg "商品管理页")
