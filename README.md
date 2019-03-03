@@ -18,6 +18,10 @@ Api接口|商品列表api|保留相关接口方便以后可扩展应用
 
 * 商品管理页展示
 
-![商品管理页展示](./public/images/markdowm/index.gif "商品管理页")
+![商品管理页展示](./public/images/markdowm/shop.gif "商品管理页")
+
+* 个人中心页展示
+
+![个人中心页展示](./public/images/markdowm/user.gif "个人中心页")
 
 

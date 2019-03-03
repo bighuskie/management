@@ -125,6 +125,10 @@
   background-color: slateblue;
   color: white;
 }
+.paging-wrapper a.active {
+  background-color: slateblue;
+  color: white;
+}
 /*
 商品详情页的样式
 */
