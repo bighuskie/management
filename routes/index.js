@@ -4,7 +4,7 @@ const userDB = require("../models/users");
 
 router.get("/", async (ctx, next) => {
   let shopCount = await shopDB.count();
-  let users = await userDB.find();
+  let users = await userDB.find().limit(4);
   await ctx.render("index", {
     title: "首页",
     user: ctx.session.user,

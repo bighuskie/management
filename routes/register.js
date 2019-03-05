@@ -1,5 +1,6 @@
 const router = require("koa-router")();
 const User = require("../models/users");
+const crypto = require("crypto");
 
 router.get("/register", async (ctx, next) => {
   await ctx.render("register");
@@ -18,6 +19,9 @@ router.post(
       if (await User.findOne({ email: req.email })) {
         ctx.body = { code: 0, message: "邮箱已存在" };
       } else {
+        //crypto - 用于加密密码
+        let md5 = crypto.createHash("md5");
+        req.password = md5.update(req.password).digest("hex");
         await new User(req).save().then(async () => {
           //保存session状态，得到用户信息
           ctx.session.user = await User.findOne(req);

@@ -1,5 +1,6 @@
 const router = require("koa-router")();
 const User = require("../models/users");
+const crypto = require("crypto");
 
 router.get("/login", async (ctx, next) => {
   await ctx.render("login");
@@ -7,6 +8,9 @@ router.get("/login", async (ctx, next) => {
 
 router.post("/login", async ctx => {
   let loginReq = ctx.request.body;
+  //crypto - 用于加密密码
+  let md5 = crypto.createHash("md5");
+  loginReq.password = md5.update(loginReq.password).digest("hex");
   let user = await User.findOne(loginReq);
   if (!user) {
     ctx.body = {
