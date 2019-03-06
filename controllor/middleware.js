@@ -5,6 +5,9 @@ exports.loginJudge = async (ctx, next) => {
     await next();
   } else {
     if (ctx.session.user) {
+      ctx.set({
+        "Cache-Control": "max-age=2000"
+      });
       await next();
     } else {
       ctx.redirect("/login");

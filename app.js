@@ -6,6 +6,8 @@ const onerror = require("koa-onerror");
 const bodyparser = require("koa-bodyparser");
 const logger = require("koa-logger");
 const session = require("koa-session");
+const compress = require("koa-compress");
+
 //引入路由
 const index = require("./routes/index");
 const users = require("./routes/users");
@@ -52,13 +54,18 @@ app.use(middleware.loginJudge);
 
   app.use(session(CONFIG, app));
 }
-
+//静态资源配置
 {
   app.use(
     views(__dirname + "/views", {
       extension: "ejs"
     })
   );
+}
+//开启gzip压缩
+{
+  const options = { threshold: 2048 };
+  app.use(compress(options));
 }
 
 // routes
