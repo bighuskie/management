@@ -113,11 +113,11 @@ router.get("/deleteshop", async (ctx, next) => {
   await shopDB
     .findByIdAndDelete(shopId)
     .then(() => {
-      alert("删除成功");
+      console.log("删除成功");
       ctx.response.redirect("/shopmanger");
     })
     .catch(err => {
-      console.log("删除失败");
+      console.log(err);
     });
 });
 
